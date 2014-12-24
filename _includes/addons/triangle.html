@@ -1,18 +1,18 @@
 <article id="triangle" data-type="mixin">
   <header class="title-bar">
     <h2 class="title">Triangle</h2>
-    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_triangle.scss">View source</a>
+    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_triangle.scss">ソースを見る</a>
   </header>
-  <p>Creates a visual triangle. Mixin takes <code>($size, $color, $direction)</code></p>
-  <p>The <code>$size</code> argument can take one or two values&mdash;<code>width height</code>.</p>
-  <p>The <code>$color</code> argument can take one or two values&mdash;<code>foreground-color background-color</code>.</p>
+  <p>視覚的な三角形を作ります。ミックスインは <code>($size, $color, $direction)</code> の引数をとります。</p>
+  <p><code>$size</code> 引数は、1つまたは2つの値を取り、<code>width height</code>を表します。</p>
+  <p><code>$color</code> 引数は、1つまたは2つの値を取り、<code>foreground-color background-color</code>を表します。</p>
   <p><code>$direction: up, down, left, right, up-right, up-left, down-right, down-left</code></p>
 
 {% highlight scss %}
 @include triangle(12px, gray, down);
 @include triangle(12px 6px, gray lavender, up-left);
 {% endhighlight %}
-  <h3>Demo</h3>
+  <h3>デモ</h3>
   <section class="demo">
     <div class="up"></div>
     <div class="down"></div>

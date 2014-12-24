@@ -1,15 +1,15 @@
 <article id="border-color" data-type="mixin">
   <header class="title-bar">
     <h2 class="title">Border-color</h2>
-    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_directional-values.scss">View source</a>
+    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_directional-values.scss">ソースを見る</a>
   </header>
-  <p>The <code>border-color</code> mixin accepts up to four values, including <code>null</code>, and uses the <a href="#directional-property">directional-property</a> mixin to map them to their respective directions.</p>
+  <p><code>border-color</code> ミックスインは、<code>null</code> を含む最大4つの値を受け取り、<a href="#directional-property">directional-property</a> ミックスインを使って、それぞれの方角にマッピングします。</p>
 
 {% highlight scss %}
 @include border-color(red green null blue);
 {% endhighlight %}
 
-<h3>CSS Output</h3>
+<h3>CSS出力</h3>
 {% highlight scss %}
 border-top-color: red;
 border-right-color: green;

@@ -1,17 +1,17 @@
 <article id="transitions" data-type="mixin">
   <header class="title-bar">
     <h2 class="title">Transition</h2>
-    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_transition.scss">View source</a>
-    <a class="view-spec" href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">View spec</a>
+    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_transition.scss">ソースを見る</a>
+    <a class="view-spec" href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">スペックを見る</a>
   </header>
-  <p>This mixin provides a shorthand syntax and supports multiple transitions.</p>
+  <p>このミックスインは、短縮形のシンタックスを提供し、複数のトランジションをサポートします。</p>
 
 {% highlight scss %}
 @include transition(all 2.0s ease-in-out);
 @include transition(opacity 1.0s ease-in 0s, width 2.0s ease-in 2s);
 {% endhighlight %}
 
-  <p>To transition vendor-prefixed properties, e.g. <code>-webkit-transform</code> and <code>-moz-transform</code>, do not use the shorthand mixin. Instead, use the individual transition mixins:</p>
+  <p>ベンダープレフィックス付きプロパティにtransitionを適用する場合、例えば <code>-webkit-transform</code> や <code>-moz-transform</code>の場合、短縮形のミックスインは使用せず、代わりに個別のtransitionミックスインを使用してください。</p>
 
 {% highlight scss %}
 @include transition-property(transform);

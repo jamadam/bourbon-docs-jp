@@ -1,35 +1,35 @@
 <article id="html5-input-types" data-type="variable">
   <header class="title-bar">
     <h2 class="title">HTML5 Input Types</h2>
-    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_html5-input-types.scss">View source</a>
+    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_html5-input-types.scss">ソースを見る</a>
   </header>
-  <p>This addon provides you with five variables which each contain a list of all html5 input types.</p>
-  <p>Three that render as text-based inputs, excluding textarea. In other words, it allows for easy targeting of all inputs that mimic <code>input[type="text"]</code>.</p>
+  <p>このアドオンは、html5のinputタイプのリストを格納した5つの変数を提供します。This addon provides you with five variables which each contain a list of all html5 input types.</p>
+  <p>このうち3つは、textareaを除いたテキストベースのinputを出力します。言い換えると、これらは <code>input[type="text"]</code> を真似て、すべてのinputを簡単に指定することを可能にします。</p>
   <ul>
     <li><code>#{$all-text-inputs}</code></li>
-    <li><code>#{$all-text-inputs-hover}</code>&mdash; generates selectors that target all-text-inputs with <code>:hover</code> pseudo-classes</li>
-    <li><code>#{$all-text-inputs-focus}</code>&mdash; generates selectors that target all-text-inputs with <code>:focus</code> pseudo-classes</li>
+    <li><code>#{$all-text-inputs-hover}</code>&mdash; all-text-inputs を指定するセレクターに <code>:hover</code> 疑似クラスを付与して出力します</li>
+    <li><code>#{$all-text-inputs-focus}</code>&mdash; all-text-inputs を指定するセレクターに <code>:focus</code> 疑似クラスを付与して出力します</li>
   </ul>
 
-  <p>Four that render as button-based inputs, excluding button. In other words, it allows for easy targeting of all inputs that mimic <code>input[type="submit"]</code>.</p>
+  <p>このうち4つは、buttonを除いたボタンベースのinputを出力します。言い換えると、これらは <code>input[type="submit"]</code> を真似て、すべてのinputを簡単に指定することを可能にします。</p>
   <ul>
     <li><code>#{$all-button-inputs}</code></li>
-    <li><code>#{$all-button-inputs-hover}</code>&mdash; generates selectors that target all-text-inputs with <code>:hover</code> pseudo-classes</li>
-    <li><code>#{$all-button-inputs-focus}</code>&mdash; generates selectors that target all-text-inputs with <code>:focus</code> pseudo-classes</li>
-    <li><code>#{$all-button-inputs-active}</code>&mdash; generates selectors that target all-text-inputs with <code>:active</code> pseudo-classes</li>
+    <li><code>#{$all-button-inputs-hover}</code>&mdash; all-text-inputs を指定するセレクターに <code>:hover</code> 疑似クラスを付与して出力します</li>
+    <li><code>#{$all-button-inputs-focus}</code>&mdash; all-text-inputs を指定するセレクターに <code>:focus</code> 疑似クラスを付与して出力します</li>
+    <li><code>#{$all-button-inputs-active}</code>&mdash; all-text-inputs を指定するセレクターに <code>:active</code> 疑似クラスを付与して出力します</li>
   </ul>
-  <p>Note: You must use interpolation with the variable&mdash;<code>#{ }</code>.</p>
+  <p>注: 変数を渡すためには <code>#{ }</code> のような補完コードを使う必要があります。</p>
 
 {% highlight scss %}
 #{$all-text-inputs} {
   border: 1px solid green;
 }
 
-#{$all-text-inputs-hover} { // Target the :hover pseudo-class
+#{$all-text-inputs-hover} { // :hover 疑似クラスを対象とする
   background: yellow;
 }
 
-#{$all-text-inputs-focus} { // Target the :focus pseudo-class
+#{$all-text-inputs-focus} { // :focus 疑似クラスを対象とする
   background: white;
 }
 
@@ -37,20 +37,20 @@
   background: green;
 }
 
-#{$all-button-inputs-hover} { // Target the :hover pseudo-class
+#{$all-button-inputs-hover} { // :hover 疑似クラスを対象とする
   background: yellow;
 }
 
-#{$all-button-inputs-focus} { // Target the :focus pseudo-class
+#{$all-button-inputs-focus} { // :focus 疑似クラスを対象とする
   background: white;
 }
 
-#{$all-button-inputs-active} { // Target the :active pseudo-class
+#{$all-button-inputs-active} { // :active 疑似クラスを対象とする
   background: blue;
 }
 {% endhighlight %}
 
-<h3>CSS Output</h3>
+<h3>CSS出力</h3>
 {% highlight scss %}
 input[type="email"], input[type="number"],   input[type="password"], input[type="search"],
 input[type="tel"],   input[type="text"],     input[type="url"],      input[type="color"],

@@ -1,16 +1,16 @@
 <article id="font-feature-settings" data-type="mixin">
   <header class="title-bar">
     <h2 class="title">Font-feature-settings</h2>
-    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-feature-settings.scss">View source</a>
-    <a class="view-spec" href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings">View spec</a>
+    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-feature-settings.scss">ソースを見る</a>
+    <a class="view-spec" href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings">スペックを見る</a>
   </header>
-  <p>The <code>font-feature-settings</code> mixin is helpful for using the advanced typographic features included in some OpenType fonts.</p>
+  <p><code>font-feature-settings</code> ミックスインは、 OpenType フォントに含まれることのある高度なタイポグラフィー機能を使う際に便利です。</p>
 
 {% highlight scss %}
-// Use ligatures if the typeface and font file include them
+// 書体とフォントファイルが合字を含んでいれば使用する
 @include font-feature-settings("liga");
 
-// Use proportional numbers, but not automatic kerning
+// 数字にプロポーショナルフォントを使い、自動カーニングは行わない
 @include font-feature-settings("pnum", "kern" false);
 {% endhighlight %}
 </article>

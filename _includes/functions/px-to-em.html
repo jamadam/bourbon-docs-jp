@@ -1,15 +1,15 @@
 <article id="px-to-em" data-type="function">
   <header class="title-bar">
     <h2 class="title">Em</h2>
-    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_px-to-em.scss">View source</a>
+    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_px-to-em.scss">ソースを見る</a>
   </header>
-  <p>Convert pixels to ems.</p>
-  <p>For a relational value, the input is calculated based on a parent value. The default parent is <code>16px</code>.<br>The parent can be changed by passing an optional second value. Accepts unitless and pixel values for size.</p>
+  <p>ピクセル値を em 値に変換します。</p>
+  <p>入力値は親の値をベースとして相対値が計算されます。デフォルトの親は <code>16px</code> です。<br>オプションの第2引数を与えることで、親を変更できます。サイズには単位なしやピクセル値も指定可能です。</p>
 {% highlight scss %}
 font-size: em(12);
 font-size: em(12, 24);
 {% endhighlight %}
-  <h3>CSS Output</h3>
+  <h3>CSS出力</h3>
 {% highlight scss %}
 font-size: 0.75em;
 font-size: 0.5em;

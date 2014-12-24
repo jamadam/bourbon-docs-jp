@@ -1,11 +1,11 @@
 <article id="linear-gradient" data-type="mixin">
   <header class="title-bar">
     <h2 class="title">Linear-gradient</h2>
-    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_linear-gradient.scss">View source</a>
-    <a class="view-spec" href="https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient">View spec</a>
+    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_linear-gradient.scss">ソースを見る</a>
+    <a class="view-spec" href="https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient">スペックを見る</a>
   </header>
-  <p>Gradient Position is optional. Position can be a degree (<code>90deg</code>). Mixin supports up to 10 color-stops.</p>
-  <p>This mixin will output a fallback <code>background-color: #first-color;</code> declaration. A <code>$fallback</code> argument can be passed to change the fallback color.</p>
+  <p>グラデーションポジションはプションです。ポジションは角度で指定できます (<code>90deg</code>) 。ミックスインでは最大10ヶのカラーストップをサポートします。</p>
+  <p>このミックスインは <code>background-color: #first-color;</code> の宣言をフォールバックとして出力します。<code>$fallback</code> 変数を渡すことで、フォールバックの色を変更できます。</p>
 
 {% highlight scss %}
 @include linear-gradient(#1e5799, #2989d8);
@@ -14,6 +14,6 @@
 @include linear-gradient(50deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
 {% endhighlight %}
 
-  <h3>Demo</h3>
+  <h3>デモ</h3>
   <section class="demo"></section>
 </article>

@@ -1,48 +1,48 @@
 <article id="modular-scale" data-type="function">
   <header class="title-bar">
     <h2 class="title">Modular Scale</h2>
-    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_modular-scale.scss">View Source</a>
+    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_modular-scale.scss">ソースを見る</a>
   </header>
 
-  <p>This function increments up or down a defined scale, then returns an adjusted value. This helps establish consistent measurements and spacial relationships throughout your project. We provide a list of commonly used scales as <a href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_modular-scale.scss">pre-defined variables</a>.</p>
+  <p>この関数は、定義されたスケールで上昇または下降し、調整済みの値を返します。これは、あなたのプロジェクトを通じて一貫した測量法と空間的相関関係を確立するのに役立ちます。私たちは <a href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_modular-scale.scss">定義済み変数</a> として、よく使われるスケールのリストを提供しています。</p>
 
 {% highlight scss %}
 div {
-  // Increment two steps up the default scale
-  font-size: modular-scale(2); // returns: 1.77689em
+  // デフォルトスケールで2ステップ上昇する
+  font-size: modular-scale(2); // 結果は 1.77689em
 
-  // Increment one step down the default scale
-  font-size: modular-scale(-1); // returns: 0.75019em
+  // デフォルトスケールで1ステップ下降する
+  font-size: modular-scale(-1); // 結果は 0.75019em
 
-  // Increment three steps up the default scale, with a base value of 2em
-  font-size: modular-scale(3, 2em); // returns: 4.73719em
+  // 2emを基点として、デフォルトスケールで3ステップ上昇する
+  font-size: modular-scale(3, 2em); // 結果は 4.73719em
 }
 {% endhighlight %}
 
-  <p>The default scale is the perfect fourth (<code>1.333</code>), which you can globally override:</p>
+  <p>デフォルトのスケールは完全4度 (<code>1.333</code>) で、グローバルにオーバーライドすることができます(CAN)。</p>
 
 {% highlight scss %}
 $modular-scale-ratio: $golden;
 $modular-scale-base: 1.2em;
 
 div {
-  font-size: modular-scale(2); // returns: 3.14151em
+  font-size: modular-scale(2); // 結果は 3.14151em
 }
 
 div {
-  font-size: modular-scale(3, 2em, 1.234); // returns: 3.75816em
+  font-size: modular-scale(3, 2em, 1.234); // 結果は 3.75816em
 }
 {% endhighlight %}
 
-  <p>The function also supports double-stranded scales by passing it two base values.</p>
+  <p>さらに、この関数は、2つの基準値を渡すことで二本鎖のスケールもサポートします。</p>
 
 {% highlight scss %}
 div {
-  font-size: modular-scale(3, 1em 1.6em, $major-seventh); // returns: 3em
+  font-size: modular-scale(3, 1em 1.6em, $major-seventh); // 結果は 3em
 }
 {% endhighlight %}
 
-  <p>Note: <em>The function can be wrapped in Sass’s <code>abs()</code>, <code>floor()</code>, or <code>ceil()</code> functions to get the absolute value, round down or round up, respectively.</em></p>
+  <p>注: <em>この関数は、sassの <code>abs()</code> や <code>floor()</code> 、 <code>ceil()</code> の関数で包むことができ(CAN)、それぞれ、絶対値、切り捨て、切り上げを行います。</em></p>
 
-  <p>Resources: <a href="http://modularscale.com">modularscale.com</a> &amp; <a href="http://goldenratiocalculator.com">goldenratiocalculator.com</a></p>
+  <p>資料: <a href="http://modularscale.com">modularscale.com</a> &amp; <a href="http://goldenratiocalculator.com">goldenratiocalculator.com</a></p>
 </article>

@@ -1,14 +1,14 @@
 <article id="retina-image" data-type="mixin">
   <header class="title-bar">
     <h2 class="title">Retina-image</h2>
-    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_retina-image.scss">View source</a>
+    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_retina-image.scss">ソースを見る</a>
   </header>
-  <p>The mixin is a helper to generate a retina background-image and non-retina background-image. The retina background-image will output to a hidpi media-query.</p>
-  <p>The mixin uses a <code>_2x.png</code> retina filename by default.<br>
-    <code>$filename</code> will resolve a path to the image e.g. <code>'../../home-icon'</code>.<br>
-    For rails, you can use the asset-pipeline by passing <code>true</code> to the argument.</p>
-  <p><code>@ retina-image($filename, $background-size, $extension*, $retina-filename*, $retina-suffix*, $asset-pipeline*)<br>* = optional</code></p>
-  <p>Argument Defaults</p>
+  <p>このミックスインは、Retina用の background-image と非Retina用の background-image を生成するヘルパーです。Retina用の background-image は hidpi メディアクエリーに出力されます。</p>
+  <p>このミックスインは、 Retina用ファイル名のデフォルトとして、 <code>_2x.png</code> を使用します。<br>
+    <code>$filename</code> が、画像へのパスを解決します。例: <code>'../../home-icon'</code><br>
+    Railsで asset-pipeline を使用するには、 該当の引数に <code>true</code> を与えます。</p>
+  <p><code>@ retina-image($filename, $background-size, $extension*, $retina-filename*, $retina-suffix*, $asset-pipeline*)<br>* = 省略可</code></p>
+  <p>引数のデフォルト</p>
   <ul>
     <li><code>$extension: png</code></li>
     <li><code>$retina-filename: null</code></li>
@@ -22,7 +22,7 @@ span {
 }
 
 {% endhighlight %}
-  <h3>CSS Output</h3>
+  <h3>CSS出力</h3>
 {% highlight scss %}
 span {
   background-image: url(home-icon.png);

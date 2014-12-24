@@ -18,7 +18,7 @@ title: A Sass Mixin Library
     <h1 class="brand">bourbon</h1>
     <section class="buttons">
       <a href="//github.com/thoughtbot/bourbon" class="button installation">Github</a>
-      <a href="/docs/" class="button docs">Docs</a>
+      <a href="/docs/" class="button docs">ドキュメント</a>
   </section>
   </header>
 </div>
@@ -56,18 +56,18 @@ title: A Sass Mixin Library
         </div>
 
           <div class="tooltip one">
-            <p>CSS Output</p>
+            <p>CSS出力</p>
 <pre><code>background-image: -webkit-linear-gradient(   left, #FFF, #F4F5F7);
 background-image:         linear-gradient(to left, #FFF, #F4F5F7);</code></pre>
           </div>
 
           <div class="tooltip two">
-            <p>CSS Output</p>
+            <p>CSS出力</p>
   <pre><code>font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;</code></pre>
           </div>
 
           <div class="tooltip three">
-            <p>CSS Output</p>
+            <p>CSS出力</p>
 <pre><code>-webkit-transition: all 0.8s;
    -moz-transition: all 0.8s;
         transition: all 0.8s;
@@ -75,7 +75,7 @@ background-image:         linear-gradient(to left, #FFF, #F4F5F7);</code></pre>
           </div>
 
           <div class="tooltip four">
-            <p>CSS Output</p>
+            <p>CSS出力</p>
 <pre><code>position: absolute;
 right: -13px;
 top: 10px;
@@ -83,7 +83,7 @@ top: 10px;
           </div>
 
           <div class="tooltip five">
-            <p>CSS Output</p>
+            <p>CSS出力</p>
 <pre><code>-webkit-transform: rotate(45deg) skew(20deg, 30deg);
    -moz-transform: rotate(45deg) skew(20deg, 30deg);
     -ms-transform: rotate(45deg) skew(20deg, 30deg);
@@ -97,8 +97,8 @@ top: 10px;
 
   <section class="examples">
     <div class="container">
-      <h4>Forget about vendor prefixes.</h4>
-      <p>The mixins contain up-to-date vendor prefixes for support in modern browsers.</p>
+      <h4>ベンダープレフィックスはもう不要。</h4>
+      <p>モダンブラウザをサポートする最新のベンダープレフィックスがミックスインが含まれています。</p>
 
       <div class="sass-wrapper">
 {% highlight scss %}
@@ -122,8 +122,8 @@ section {
 {% endhighlight %}
     </div>
 
-      <h4>Write CSS faster and easier.</h4>
-      <p>The library contains mixins, functions, and other addons to build kick ass web stuff.</p>
+      <h4>CSSの作成をすばやく、かんたんに。</h4>
+      <p>ミックスイン、関数、アドオンなどのライブラリがクールなウェブ開発に役立ちます。</p>
       <div class="sass-wrapper">
 {% highlight scss %}
 // Bourbon mixin with Sass
@@ -151,31 +151,31 @@ h1 {
   <section class="usage">
     <div class="container">
       <img class="ruby" src="../images/marketing/ruby.png" alt="Ruby Gem">
-      <h3>Usage &amp; Installation</h3>
+      <h3>使い方とインストール方法</h3>
 
       <section class="install-instructions">
-        <h4>Install for Rails 3.1&#43;</h4>
-        <p>In your Gemfile:</p>
+        <h4>Rails 3.1&#43; の場合のインストール方法</h4>
+        <p>Gemfileにこう書いて、</p>
 {% highlight powershell %}
 gem 'bourbon'
 {% endhighlight %}
 
-        <p>Then run:</p>
+        <p>実行します。</p>
 {% highlight powershell %}
 $ bundle install
 {% endhighlight %}
 
-        <p>Restart your server. Then rename <code>application.css</code> to <code>application.css.scss</code>:</p>
+        <p>サーバーをリスタートしてください。そして、<code>application.css</code>を<code>application.css.scss</code>にリネームします。</p>
 {% highlight powershell %}
 mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss
 {% endhighlight %}
 
-        <p>Delete the sprocket directive in application.css.scss:</p>
+        <p>application.css.scss内のsprocketディレクティブを削除します。</p>
 {% highlight powershell %}
 *= require_tree .
 {% endhighlight %}
 
-        <p>Import Bourbon at the beginning of application.css.scss. All additional stylesheets must be imported below Bourbon:</p>
+        <p>application.css.scssの先頭でBourbonをインポートします。すべての追加のスタイルシートはBourbonより後にインポートしてください。</p>
 {% highlight scss %}
 @import "bourbon";
 @import "home";
@@ -184,33 +184,33 @@ mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css
       </section>
 
       <section class="install-instructions">
-        <h4>Install for a Non-Rails App</h4>
-        <h5>Installation</h5>
-        <p>Install the gem</p>
+        <h4>Railsアプリ以外の場合のインストール方法</h4>
+        <h5>インストール</h5>
+        <p>gemをインストールします。</p>
 {% highlight powershell %}
 $ gem install bourbon
 {% endhighlight %}
 
-        <p>Install Bourbon into your project’s <code>stylesheets</code> directory by generating the <code>bourbon</code> folder:</p>
+        <p><code>bourbon</code>フォルダを作って、Bourbonをあなたのプロジェクトの<code>stylesheets</code>ディレクトリにインストールします。</p>
 {% highlight powershell %}
 $ bourbon install
 {% endhighlight %}
-        <p>The generated folder will contain all the mixins and other necessary Bourbon files. It is recommended not to add or modify the Bourbon files so that you can update Bourbon easily.</p>
+        <p>ここで作られたフォルダは、Bourbonのすべてのミックスインやその他の必要なファイルを格納することになります。これらのBourbonファイルを変更したりファイルを追加したりすると、Bourbonを簡単にアップデートできなくなるので、推奨されません。</p>
         <br>
 
         <h5>Sass Watch</h5>
-        <p>Run a standard <code>sass --watch</code> from the command line:</p>
+        <p>コマンドラインにて、スタンダードな <code>sass --watch</code> を実行します。</p>
 {% highlight powershell %}
 $ sass --watch stylesheets/sass:stylesheets
 {% endhighlight %}
 
-        <p>Lastly, import the mixins at the beginning of your stylesheet(s):</p>
+        <p>最後に、あなたのスタイルシートの先頭でミックスインをインポートします。</p>
 {% highlight scss %}
 @import "bourbon/bourbon";
 {% endhighlight %}
 
-        <h5>Other Commands</h5>
-        <p>See the complete list of tools available via the <a href="//github.com/thoughtbot/bourbon/wiki/Command-Line-Interface">Command Line Interface</a>.</p>
+        <h5>その他のコマンド</h5>
+        <p>利用可能な全ツールのリストを参照してください。<a href="//github.com/thoughtbot/bourbon/wiki/Command-Line-Interface">Command Line Interface</a></p>
 {% highlight powershell %}
 $ bourbon help
 $ bourbon update
@@ -218,26 +218,26 @@ $ bourbon update
 
       </section>
       <section class="install-instructions">
-        <span><a href="//github.com/thoughtbot/bourbon/wiki/Rails-3.0.x-Install">Using Rails 3.0.x?</a></span>
+        <span><a href="//github.com/thoughtbot/bourbon/wiki/Rails-3.0.x-Install">Rails 3.0.x をお使いですか?</a></span>
       </section>
     </div>
   </section>
 
   <section class="apps">
     <div class="container">
-      <h3>Or use it in your favorite companion app</h3>
+      <h3>お好きなアプリでもご利用になれます</h3>
       <ul class="app-list">
         <li>
           <a class="codekit" href="//incident57.com/codekit/">CodeKit</a>
-          <p><a href="//incident57.com/codekit/">CodeKit</a> can handle Bourbon mixins right out the box, no configuration needed.</p>
+          <p><a href="//incident57.com/codekit/">CodeKit</a> ならBourbonミックスインをすぐに使い始められ、設定も必要ありません。</p>
         </li>
         <li>
           <a class="hammer" href="//hammerformac.com">Hammer for Mac</a>
-          <p><a href="//hammerformac.com">Hammer</a> is also preconfigured for Bourbon. Badass.</p>
+          <p><a href="//hammerformac.com">Hammer</a> もBourbonのために最初から設定済みです。</p>
         </li>
         <li>
           <a class="livereload" href="//livereload.com">LiveReload 2</a>
-          <p><a href="//livereload.com">LiveReload</a> supports Bourbon too. Follow the non-rails installation above.</p>
+          <p><a href="//livereload.com">LiveReload</a> もBourbonをサポートしています。上記の、Railsアプリ以外のインストール方法に従ってください。</p>
         </li>
       </ul>
       <img src="/images/marketing/apps.png" alt="Apps configured for Bourbon">
@@ -246,8 +246,8 @@ $ bourbon update
 
   <section class="websites">
     <div class="container">
-      <h3>Who’s using it?</h3>
-      <p><a href="//github.com/thoughtbot/bourbon/wiki/Projects-and-Companies-using-Bourbon">View More &raquo;</a></p>
+      <h3>導入事例</h3>
+      <p><a href="//github.com/thoughtbot/bourbon/wiki/Projects-and-Companies-using-Bourbon">もっと見る &raquo;</a></p>
       <a class="website yourgrind" href="//yourgrind.com"><img src="../images/marketing/yourgrind.png" alt="YourGrind website screenshot"></a>
       <a class="website fdn" href="//gofdn.com"><img src="../images/marketing/fdn.png" alt="FDN website screenshot"></a>
       <a class="website edge" href="//usetakana.com/"><img src="../images/marketing/edge.png" alt="Takana website screenshot"></a>
@@ -257,13 +257,13 @@ $ bourbon update
 
   <section class="neat">
     <div class="container">
-      <h3>Try Neat, our grid framework</h3>
+      <h3>グリットフレームワークのNeatもよろしく。</h3>
       <div class="neat-images">
         <div class="neat-logo">
           <a href="//neat.bourbon.io">
             <img src="/images/marketing/logotype.svg" alt="Bourbon Neat Logo">
           </a>
-          <a class="more-info" href="//neat.bourbon.io">More Info &raquo;</a>
+          <a class="more-info" href="//neat.bourbon.io">もっと見る &raquo;</a>
         </div>
         <div class="neat-demo">
           <a href="//neat.bourbon.io">
@@ -274,7 +274,7 @@ $ bourbon update
     </div>
     <div class="neat-tagline">
       <div class="container">
-        <h3>A <strong>lightweight</strong> semantic <strong>grid</strong> framework for <strong>Sass</strong> with <strong>Bourbon</strong>.</h3>
+        <h3><strong>Bourbon</strong>と<strong>Sass</strong>のための<strong>軽量</strong>なセマンティック・<strong>グリッド</strong>・フレームワーク</h3>
       </div>
     </div>
   </section>
@@ -288,7 +288,7 @@ $ bourbon update
     </section>
     <section class="buttons">
       <a href="//github.com/thoughtbot/bourbon" class="button installation">Github</a>
-      <a href="/docs/" class="button docs">Docs</a>
+      <a href="/docs/" class="button docs">ドキュメント</a>
     </section>
   </div>
 </footer>

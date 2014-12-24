@@ -1,24 +1,24 @@
 <article id="animation" data-type="mixin">
   <header class="title-bar">
     <h2 class="title">Animation</h2>
-    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_animation.scss">View source</a>
-    <a class="view-spec" href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation">View spec</a>
+    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_animation.scss">ソースを見る</a>
+    <a class="view-spec" href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation">スペックを見る</a>
   </header>
-  <p>The <code>animation</code> mixin supports comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.</p>
+  <p><code>animation</code> ミックスインは、個々のプロパティの異なったトランジションを一つのスタイルルールに記述できるよう、カンマ区切りの値をサポートします。リスト中のそれぞれの値は、他方のプロパティ群の同じ位置の値に対応します。</p>
 
 {% highlight scss %}
 box:hover {
-  // Animation shorthand works the same as the CSS3 animation shorthand
+  // Animation の短縮記法は、CSS3 の animation 短縮記法と同様に動作する。
   @include animation(scale 1.0s ease-in, slide 2.0s ease);
 
-  // The above outputs the same CSS as using independent, granular mixins.
+  // 上の例は、独立の細かいミックスインを使用した場合と同様の結果になる。
   @include animation-name(scale, slide);
   @include animation-duration(2s);
   @include animation-timing-function(ease);
   @include animation-iteration-count(infinite);
 }
 {% endhighlight %}
-  <h3>Demo</h3>
+  <h3>デモ</h3>
   <section class="demo">
     <div id="run-demo" class="box"></div>
   </section>

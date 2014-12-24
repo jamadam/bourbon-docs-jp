@@ -1,33 +1,33 @@
 <article id="background-image" data-type="mixin">
   <header class="title-bar">
     <h2 class="title">Background-image</h2>
-    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_background-image.scss">View source</a>
-    <a class="view-spec" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image">View spec</a>
+    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_background-image.scss">ソースを見る</a>
+    <a class="view-spec" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image">スペックを見る</a>
   </header>
-  <p>The <code>background-image</code> mixin is helpful for chaining multiple comma delimited background images and/or linear/radial-gradients into one <code>background-image</code> property. The <code>background-image</code> mixin supports up to 10 background-images.</p>
-  <p>Use in combination with the <a href="#linear-gradient-function">linear-gradient function</a> and the <a href="#radial-gradient-function">radial-gradient function</a>.</p>
+  <p><code>background-image</code> ミックスインは、背景画像や(and/or) linear/radial-gradients を一つのbackground-image プロパティにカンマ区切りで列記するのに便利です。 <code>background-image</code> ミックスインは最大で10の 背景画像 をサポートします。</p>
+  <p><a href="#linear-gradient-function">linear-gradient 関数</a> と <a href="#radial-gradient-function">radial-gradient 関数</a> との組み合わせて使用してください。</p>
 
 {% highlight scss %}
-// Image asset with a linear-gradient
+// 画像資源と一つの linear-gradient
 @include background-image(url("/images/a.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
 
-// Multiple linear-gradients - Demo
+// 複数の linear-gradients の例
 @include background-image(linear-gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%),
                            linear-gradient(#4e7ba3, darken(#4e7ba4, 10%)));
 
-// NOT SUPPORTED
+// サポートしていない
 @include background-image(url("/images/a.png") center no-repeat, url("images/b.png") left repeat);
 
-// Background-image is not a shorthand property, therefore this doesn't make sense.
+// Background-image は短縮プロパティではないため、 これは意味をなさない。
 {% endhighlight %}
 
-  <h3>Demo</h3>
+  <h3>デモ</h3>
   <section class="demo">
   </section>
 
-<h3>Note about shorthand notation</h3>
+<h3>短縮記法について</h3>
 
-<p>All CSS background properties support comma delimited values. For multiple background images you can specify the background properties like position, repeat, etc. for each image. For example:</p>
+<p>すべての CSS の background プロパティはカンマ区切りの値をサポートします。複数の背景画像のために、各画像に position、 repeat などの background プロパティを指定できます。例えば、</p>
 
 {% highlight scss %}
 @include background-image(url("/images/a.png"), url("images/b.png"));

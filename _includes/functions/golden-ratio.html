@@ -2,18 +2,18 @@
   <header class="title-bar">
     <h2 class="title">Golden Ratio</h2>
   </header>
-  <p class="alert"><b>Deprecation Warning:</b> The <code>golden-ratio</code> function has been deprecated and will be removed in the next major version release. Use the <a href="#modular-scale"><code>modular-scale</code></a> function instead.</p>
-  <p>Returns the golden ratio of a given number. Must provide a pixel or em value for the first argument. Also takes a required integer for an increment value: ...-3, -2, -1, 0, 1, 2, 3...</p>
-  <p>Note: The <code>golden-ratio</code> function can be wrapped in Sass’s <code>abs()</code>, <code>floor()</code>, or <code>ceil()</code> functions to get the absolute value, round down, or round up, respectively.</p>
+  <p class="alert"><b>Deprecation 警告:</b> <code>golden-ratio</code> 関数は廃止予定となり、次のメジャーバージョンのリリースから削除されます。代わりに <a href="#modular-scale"><code>modular-scale</code></a> を使用してください。</p>
+  <p>与えられた値の黄金比を返します。第1引数にピクセル値またはem値を与えてください(MUST)。また、 ...-3, -2, -1, 0, 1, 2, 3... のような増分の整数値を引数にとります(REQUIRED)。</p>
+  <p>注: <code>golden-ratio</code> 関数は、Sassの <code>abs()</code> や <code>floor()</code> 、 <code>ceil()</code> の関数で包むことができ(CAN)、それぞれ、絶対値、切り捨て、切り上げを行います。</p>
 
 {% highlight scss %}
-// Positive number will increment up the golden-ratio
+// 正数は黄金比を加算する
 font-size: golden-ratio(14px,  1);
 // returns: 22.652px
 
-// Negative number will increment down the golden-ratio
+// 負数は黄金比を減算する
 font-size: golden-ratio(14px, -1);
 // returns: 8.653px
 {% endhighlight %}
-  <p>Resources: <a href="http://modularscale.com/">modularscale.com</a></p>
+  <p>資料: <a href="http://modularscale.com/">modularscale.com</a></p>
 </article>
