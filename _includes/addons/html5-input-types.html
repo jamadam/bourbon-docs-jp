@@ -1,22 +1,23 @@
 <article id="html5-input-types" data-type="variable">
   <header class="title-bar">
     <h2 class="title">HTML5 Input Types</h2>
-    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_html5-input-types.scss">ソースを見る</a>
+    <a class="view-source" href="//github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_html5-input-types.scss">ソースを見る</a>
   </header>
-  <p>このアドオンは、html5のinputタイプのリストを格納した5つの変数を提供します。This addon provides you with five variables which each contain a list of all html5 input types.</p>
+  <p>このアドオンは、HTML5のinputタイプのリストを格納したいくつかの変数を提供します。This addon provides you with five variables which each contain a list of all html5 input types.</p>
   <p>このうち3つは、textareaを除いたテキストベースのinputを出力します。言い換えると、これらは <code>input[type="text"]</code> を真似て、すべてのinputを簡単に指定することを可能にします。</p>
   <ul>
     <li><code>#{$all-text-inputs}</code></li>
     <li><code>#{$all-text-inputs-hover}</code>&mdash; all-text-inputs を指定するセレクターに <code>:hover</code> 疑似クラスを付与して出力します</li>
     <li><code>#{$all-text-inputs-focus}</code>&mdash; all-text-inputs を指定するセレクターに <code>:focus</code> 疑似クラスを付与して出力します</li>
+    <li><code>#{$all-text-inputs-active}</code>&mdash; all-text-inputs を指定するセレクターに <code>:active</code> 疑似クラスを付与して出力します</li>
   </ul>
 
   <p>このうち4つは、buttonを除いたボタンベースのinputを出力します。言い換えると、これらは <code>input[type="submit"]</code> を真似て、すべてのinputを簡単に指定することを可能にします。</p>
   <ul>
     <li><code>#{$all-button-inputs}</code></li>
-    <li><code>#{$all-button-inputs-hover}</code>&mdash; all-text-inputs を指定するセレクターに <code>:hover</code> 疑似クラスを付与して出力します</li>
-    <li><code>#{$all-button-inputs-focus}</code>&mdash; all-text-inputs を指定するセレクターに <code>:focus</code> 疑似クラスを付与して出力します</li>
-    <li><code>#{$all-button-inputs-active}</code>&mdash; all-text-inputs を指定するセレクターに <code>:active</code> 疑似クラスを付与して出力します</li>
+    <li><code>#{$all-button-inputs-hover}</code>&mdash; all-button-inputs を指定するセレクターに <code>:hover</code> 疑似クラスを付与して出力します</li>
+    <li><code>#{$all-button-inputs-focus}</code>&mdash; all-button-inputs を指定するセレクターに <code>:focus</code> 疑似クラスを付与して出力します</li>
+    <li><code>#{$all-button-inputs-active}</code>&mdash; all-button-inputs を指定するセレクターに <code>:active</code> 疑似クラスを付与して出力します</li>
   </ul>
   <p>注: 変数を渡すためには <code>#{ }</code> のような補完コードを使う必要があります。</p>
 
@@ -31,6 +32,10 @@
 
 #{$all-text-inputs-focus} { // :focus 疑似クラスを対象とする
   background: white;
+}
+
+#{$all-text-inputs-active} { // Target the :active pseudo-class
+  background: blue;
 }
 
 #{$all-button-inputs} {
@@ -56,7 +61,7 @@ input[type="email"], input[type="number"],   input[type="password"], input[type=
 input[type="tel"],   input[type="text"],     input[type="url"],      input[type="color"],
 input[type="date"],  input[type="datetime"], input[type="datetime-local"],
 input[type="month"], input[type="time"],     input[type="week"] {
-  border: 1px solid green;
+  background: green;
 }
 
 input[type="email"]:hover, input[type="number"]:hover,   input[type="password"]:hover, input[type="search"]:hover,
@@ -73,28 +78,35 @@ input[type="month"]:focus, input[type="time"]:focus,     input[type="week"]:focu
   background: white;
 }
 
+input[type="email"]:active, input[type="number"]:active,   input[type="password"]:active, input[type="search"]:active,
+input[type="tel"]:active,   input[type="text"]:active,     input[type="url"]:active,      input[type="color"]:active,
+input[type="date"]:active,  input[type="datetime"]:active, input[type="datetime-local"]:active,
+input[type="month"]:active, input[type="time"]:active,     input[type="week"]:active {
+  background: blue;
+}
+
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-background: green;
+  background: green;
 }
 
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-background: yellow;
+  background: yellow;
 }
 
 input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus {
-background: white;
+  background: white;
 }
 
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-background: blue;
+  background: blue;
 }
 {% endhighlight %}
 

@@ -1,19 +1,19 @@
 <article id="calc" data-type="mixin">
   <header class="title-bar">
     <h2 class="title">Calc</h2>
-    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_calc.scss">ソースを見る</a>
-    <a class="view-spec" href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc">スペックを見る</a>
+    <a class="view-source" href="//github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_calc.scss">ソースを見る</a>
+    <a class="view-spec" href="//developer.mozilla.org/en-US/docs/Web/CSS/calc">スペックを見る</a>
   </header>
   <p>CSS3 の <code>calc</code> 関数にベンダープレフィックスをつけるミックスインです。引数としてプロパティと値を一つずつとります。</p>
 
 {% highlight scss %}
-@include calc(width, '100% - 80px');
+@include calc(width, "100% - 80px");
 {% endhighlight %}
 
-注: 変数を渡すためには #{ } のような補完コードを使う必要があります。
+注: 変数を渡すためには <code>#{&hellip;}</code> のような補完コードを使う必要があります。
 {% highlight scss%}
 $width: 100%;
 
-@include calc(width, '#{$width} - 80px');
+@include calc(width, "#{$width} - 80px");
 {% endhighlight %}
 </article>

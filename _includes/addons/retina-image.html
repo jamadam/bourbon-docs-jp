@@ -1,14 +1,18 @@
 <article id="retina-image" data-type="mixin">
   <header class="title-bar">
-    <h2 class="title">Retina-image</h2>
-    <a class="view-source" href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_retina-image.scss">ソースを見る</a>
+    <h2 class="title">Retina Image</h2>
+    <a class="view-source" href="//github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_retina-image.scss">ソースを見る</a>
   </header>
-  <p>このミックスインは、Retina用の background-image と非Retina用の background-image を生成するヘルパーです。Retina用の background-image は hidpi メディアクエリーに出力されます。</p>
-  <p>このミックスインは、 Retina用ファイル名のデフォルトとして、 <code>_2x.png</code> を使用します。<br>
-    <code>$filename</code> が、画像へのパスを解決します。例: <code>'../../home-icon'</code><br>
-    Railsで asset-pipeline を使用するには、 該当の引数に <code>true</code> を与えます。</p>
-  <p><code>@ retina-image($filename, $background-size, $extension*, $retina-filename*, $retina-suffix*, $asset-pipeline*)<br>* = 省略可</code></p>
-  <p>引数のデフォルト</p>
+  <p><code>retina-image</code> ミックスインは、Retina用の background-image と非Retina用の background-image を生成するヘルパーです。Retina用の background Image は HIDPI メディアクエリーに出力されます。このミックスインは、 ファイル名の接尾辞のデフォルトとして、 <code>_2x.png</code> を使用します。</p>
+
+  <p><code>$filename</code> が、画像へのパスを解決します(例: <code>"../../home-icon"</code>)。Railsで asset-pipeline を使用するには、該当の引数に <code>true</code> を与えます。</p>
+
+{% highlight scss %}
+@retina-image($filename, $background-size, $extension*, $retina-filename*, $retina-suffix*, $asset-pipeline*)
+{% endhighlight %}
+  <p><em>* = 省略可</em></p>
+
+  <h3>引数のデフォルト</h3>
   <ul>
     <li><code>$extension: png</code></li>
     <li><code>$retina-filename: null</code></li>
@@ -18,20 +22,21 @@
 
 {% highlight scss %}
 span {
-  @include retina-image(home-icon, 32px 20px)
+  @include retina-image(home-icon, 32px 20px);
 }
-
 {% endhighlight %}
+
   <h3>CSS出力</h3>
-{% highlight scss %}
+{% highlight css %}
 span {
   background-image: url(home-icon.png);
 }
+
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
   span {
     background-image: url(home-icon_2x.png);
-    background-size: 32px 20px; }
+    background-size: 32px 20px;
+  }
 }
 {% endhighlight %}
 </article>
-
