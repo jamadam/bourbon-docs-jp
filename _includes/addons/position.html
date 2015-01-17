@@ -3,19 +3,23 @@
     <h2 class="title">Position</h2>
     <a class="view-source" href="//github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_position.scss">ソースを見る</a>
   </header>
-  <p>ページ内の要素の位置を設定する省略記法です。</p>
-  <p>第1引数は省略可能で、 <code>relative</code> がデフォルト値です。第2引数はCSSの標準的な省略記法を踏襲したスペース区切りの値リストです。</p>
-  <p>注: null 値は無視されます。次の例では、right と bottom の位置のためのセレクタは生成されないことを意味します。一方で、topの位置は 0px になります。</p>
+  <p>要素の位置を設定する省略記法です。</p>
+  <p>第1引数は省略可能で、デフォルトは <code>relative</code> です。第2引数は、スペース区切りのリストで<code>top</code> 、 <code>right</code> 、 <code>bottom</code> 、 <code>left</code> の値を指定します。これは、スタンダードなCSSの省略記法に準拠します。</p>
+  <p><strong>注) </strong> <code>null</code> 値は無視されます。つまり、次の例では、<code>right</code> と <code>bottom</code> プロパティのセレクターは生成されないということです。</p>
 
-  <p>こう書く代わりに</p>
 {% highlight scss %}
-position: relative;
-top: 0px;
-left: 100px;
+.element {
+  @include position(relative, 0 null null 10em);
+}
 {% endhighlight %}
 
-  <p>こう書けます</p>
-{% highlight scss %}
-@include position(relative, 0px null null 100px);
+<h3>CSS Output</h3>
+
+{% highlight css %}
+.element {
+  position: relative;
+  top: 0;
+  left: 10em;
+}
 {% endhighlight %}
 </article>
