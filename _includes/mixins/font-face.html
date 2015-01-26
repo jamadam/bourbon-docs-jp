@@ -4,15 +4,23 @@
     <a class="view-source" href="//github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss">ソースを見る</a>
     <a class="view-spec" href="//developer.mozilla.org/en-US/docs/Web/CSS/@font-face">スペックを見る</a>
   </header>
-  <p>シンプルな <code>@font-face</code> ミックスインは、カスタムフォントの拡張を簡単にします。使用例のとおり。</p>
-  <p>このミックスインは Rails アセットパイプラインと合わせた用途のために、オプショナルな引数 <code>$asset-pipeline: true</code> をとります。</p>
+  <p><code>@font-face</code> 宣言を生成します。引数として、太さ、スタイル、Rails アセットパイプラインを使用するかどうか、それからファイルフォーマットを受け付けます。</p>
 
 {% highlight scss %}
-@include font-face(SourceSansPro, "/fonts/Source_Sans_Pro/SourceSansPro-Regular");
-@include font-face(SourceSansPro, "/fonts/Source_Sans_Pro/SourceSansPro-Bold", bold);
-@include font-face(SourceSansPro, "/fonts/Source_Sans_Pro/SourceSansPro-Italic", normal, italic);
+@include font-face("Source Sans Pro", "/fonts/source-sans-pro/source-sans-pro-regular");
+@include font-face("Source Sans Pro", "/fonts/source-sans-pro/source-sans-pro-bold", bold);
+@include font-face("Source Sans Pro", "/fonts/source-sans-pro/source-sans-pro-italic", normal, italic);
+{% endhighlight %}
 
-// Rails asset-pipeline - フォントは app/assets/fonts/ に格納する
-@include font-face(SourceSansPro, "Source_Sans_Pro/SourceSansPro-Regular", normal, $asset-pipeline: true);
+<p>The <code>$file-formats</code> argument allows you specify your font’s file formats (the default is <code>eot woff2 woff ttf svg</code>:</p>
+
+{% highlight scss %}
+@include font-face("Source Sans Pro", "/fonts/source-sans-pro/source-sans-pro-regular", $file-formats: eot woff2 woff);
+{% endhighlight %}
+
+<p>Rails アセットパイプラインも使用できます。<code>app/assets/fonts/</code> にフォントを格納してください。</p>
+
+{% highlight scss %}
+@include font-face("Source Sans Pro", "source-sans-pro/source-sans-pro-regular", normal, $asset-pipeline: true, $file-formats: eot woff ttf));
 {% endhighlight %}
 </article>
