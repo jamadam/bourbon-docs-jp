@@ -3,35 +3,24 @@
     <h2 class="title">Hide Text</h2>
     <a class="view-source" href="//github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_hide-text.scss">ソースを見る</a>
   </header>
-  <p><code>hide-text</code> は、画像の置き換えのミックスインです。これは <a href="//github.com/h5bp/html5-boilerplate/commit/aa0396eae757c9e03dda4e463fb0d4db5a5f82d7">HTML5 Boilerplate image replacement</a> をベースとしています。</p>
-  <p>この画像置き換えの手法は、 text-indent の手法の代替で、これには <a href="//nicolasgallagher.com/another-css-image-replacement-technique/">パフォーマンとその他の利点</a> があります。</p>
-  <p>この動作のためには、height 宣言が必須で(REQUIRED)、引数として指定可能です(デフォルトは <code>1em</code> です)。</p>
+  <p>背景画像を表示するためにテキストを隠します(例えばロゴなど)。これは <a href="//zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement">the "Kellum Method" image replacement</a> をベースとしています。</p>
+  <p>この画像置換は、HTML5 Boilerplate method を改善したもので、同様の利点があります。</p>
+  <p>高さの宣言はもはや必要なくなりましたが、インラインレベル要素にはブロックレベルの display スタイル("block", "inine-block", 等)を適用する必要があります。</p>
 
 {% highlight scss %}
 .element {
   @include hide-text;
   background-image: url(logo.png);
 }
-
-.element {
-  @include hide-text(2em); // passing an optional height argument
-}
 {% endhighlight %}
 
-  <h3>CSS Output</h3>
+  <h3>CSS出力</h3>
 {% highlight css %}
 .element {
-  height: 1em;
-  line-height: 1.5;
+  text-indent: 101%;
   overflow: hidden;
+  white-space: nowrap;
   background-image: url(logo.png);
-}
-
-.element::before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 100%;
 }
 {% endhighlight %}
 </article>

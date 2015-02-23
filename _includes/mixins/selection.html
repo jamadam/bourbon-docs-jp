@@ -1,39 +1,40 @@
 <article id="selection" data-type="mixin">
-    <header class="title-bar">
-        <h2 class="title">Selection</h2>
+  <header class="title-bar">
+      <h2 class="title">Selection</h2>
         <a class="view-source" href="//github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_selection.scss">ソースを見る</a>
         <a class="view-spec" href="//developer.mozilla.org/en-US/docs/Web/CSS/::selection">スペックを見る</a>
-    </header>
-    <p>ベンダープレフィックス付きの selection セレクターをスタイル設定のために出力します。ベースレベルでも使用できます。</p>
+  </header>
+  <p>標準およびプレフィックス付きの <code>::selection</code> 疑似クラスを出力します。引数として <code>true</code> を渡すと、現在の要素を考慮します。</p>
 
 {% highlight scss %}
 @include selection {
-  background-color: white;
+  background-color: #ffbb52;
 }
 
-p {
-  @include selection {
-    background-color: black;
-    color: white;
+.element {
+  @include selection(true) {
+    background-color: #ffbb52;
   }
 }
 {% endhighlight %}
+
 <h3>CSS出力</h3>
-{% highlight scss %}
-::selection {
-  background-color: white;
-}
+
+{% highlight css %}
 ::-moz-selection {
-  background-color: white;
+  background-color: #ffbb52;
 }
 
-p::selection {
-  background-color: black;
-  color: white;
+::selection {
+  background-color: #ffbb52;
 }
-p::-moz-selection {
-  background-color: black;
-  color: white;
+
+.element::-moz-selection {
+  background-color: #ffbb52;
+}
+
+.element::selection {
+  background-color: #ffbb52;
 }
 {% endhighlight %}
 </article>
