@@ -12,7 +12,7 @@
 @include font-face("Source Sans Pro", "/fonts/source-sans-pro/source-sans-pro-italic", normal, italic);
 {% endhighlight %}
 
-<p>The <code>$file-formats</code> argument allows you specify your font’s file formats (the default is <code>eot woff2 woff ttf svg</code>:</p>
+<p><code>$file-formats</code> 引数でフォントのファイルフォーマットを明示できます。デフォルトは <code>eot woff2 woff ttf svg</code> です。</p>
 
 {% highlight scss %}
 @include font-face("Source Sans Pro", "/fonts/source-sans-pro/source-sans-pro-regular", $file-formats: eot woff2 woff);
